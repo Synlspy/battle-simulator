@@ -1,0 +1,8 @@
+#makes sure the build directory doesn't get commited either
+
+/build/
+
+#file extensions that are not a part of the source code
+
+*.o
+*.d
