@@ -1,3 +1,7 @@
+#main executable
+
+game
+
 #makes sure the build directory doesn't get commited either
 
 /build/
