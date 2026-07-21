@@ -1,8 +1,9 @@
 #include <stdio.h>
+#include <startup/startup.h>
 
 int main(void){
 
 	//temp code to make sure everything works
-	printf("Hello, world!\n");
+	startup();
 	return 0;
 }
