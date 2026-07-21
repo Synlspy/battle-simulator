@@ -10,3 +10,7 @@ game
 
 *.o
 *.d
+
+#vscode
+
+.vscode
