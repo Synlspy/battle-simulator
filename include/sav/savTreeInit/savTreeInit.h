@@ -3,6 +3,8 @@
 
 #include <stdbool.h>
 
+#define DIR_PERMS 0755
+
 bool createSavTree(void);
 
 #endif //SAVETREEINIT_H
