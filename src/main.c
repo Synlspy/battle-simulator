@@ -5,5 +5,6 @@ int main(void){
 
 	//temp code to make sure everything works
 	startup();
+	
 	return 0;
 }

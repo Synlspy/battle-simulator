@@ -1,14 +1,9 @@
 #include <startup/startup.h>
-#include <sys/stat.h>
-#include <sys/types.h>
-#include <stdio.h>
+#include <sav/savTreeInit/savTreeInit.h>
 
 void startup(void){
 
-    //FIXME: add error checking as well as fix redundancy
-    mkdir("sav", 0777);
-    mkdir("sav/sav1", 0777);
-    mkdir("sav/sav2", 0777);
-    mkdir("sav/sav3", 0777);
+    //NOTE: will eventually replace with dedicated save system init function
+    createSavTree();
 
 }
