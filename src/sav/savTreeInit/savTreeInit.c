@@ -5,23 +5,37 @@
 #include <stdbool.h>
 #include <stdio.h>
 
+
+//THIS CODE DOES NOT HANDLE VERIFYING FOLDER PERMISSIONS AT RUNTIME!
+//THAT IS DONE IN THE 'savTreeVerify()' FUNCTION
+
+//The DIR_PERMS macro is defined in savTreeInit.h as 0755
+
 bool createSavTree(void){
     static const char *subdir[] = {"sav/sav1", "sav/sav2", "sav/sav3"};
 
     //check if root sav folder exists
-        if(mkdir("sav", DIR_PERMS) == -1 && errno != EEXIST){
-            perror("Error: Couldn't create root 'sav' folder");
+
+    if(mkdir("sav", DIR_PERMS) == -1){
+        if(errno != EEXIST){
+            perror("sav");
             return false;
         }
+               
+    }
 
     size_t totalDirs = sizeof(subdir) / sizeof(subdir[0]);
 
-    //only loop through folder creation if folder doesn't already exist
+    //attempt to create each directory
+
     for(size_t i = 0; i < totalDirs; i++){
         
-        if(mkdir(subdir[i], DIR_PERMS) == -1 && errno != EEXIST){
-            perror(subdir[i]);
-            return false;
+        if(mkdir(subdir[i], DIR_PERMS) == -1){
+            if(errno != EEXIST){
+                perror(subdir[i]);
+                return false;
+            }
+            
         }
 
     }
