@@ -10,7 +10,7 @@
 
 /**
  * @brief Default permissions for created directories (rwxr-xr-x)
- * Standard on POSIX systems. It gives the owner write/read/execute permissions and group/others read/execute permissions
+ * Standard on POSIX systems. It grants the owner write/read/execute permissions and group/others read/execute permissions
  */
 
 #define DIR_PERMS 0755
