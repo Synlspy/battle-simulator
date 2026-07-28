@@ -13,7 +13,7 @@
 
 bool createSavTree(void){
 
-    static const char *subdir[] = {"sav/sav1", "sav/sav2", "sav/sav3"};
+    static const char *subdir[] = SUBDIR_PATHS;
 
     if(mkdir("sav", DIR_PERMS) == -1){
         if(errno != EEXIST){ //Excludes EEXIST because it would trigger false errors and exit after the first run

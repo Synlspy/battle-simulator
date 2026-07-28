@@ -16,6 +16,12 @@
 #define DIR_PERMS 0755
 
 /**
+ * @brief Subdirectories for the save directory tree.
+ */
+
+ #define SUBDIR_PATHS {"sav/sav1", "sav/sav2", "sav/sav3"}
+
+/**
  * @brief Creates the save directory tree.
  * This function creates/initializes the "sav/" directory, as well as the subsequent "sav/sav1/", "sav/sav2/", and "sav/sav3/" directories
  * 
